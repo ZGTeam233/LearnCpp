@@ -13,7 +13,7 @@ public:
     Person(int a, const std::string &n) : age(a), name(n) {}
     Person(std::istream&);
 
-    const void eat() const {
+    void eat() const {
         std::cout << name << " is eating." << std::endl;
         std::cout << "He is " << age << " years old." << std::endl;
     }
