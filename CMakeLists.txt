@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 4.2)
-project(learn_cpp LANGUAGES C CXX)
+project(LearnCpp LANGUAGES C CXX)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 20)
