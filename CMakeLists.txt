@@ -9,7 +9,8 @@ add_executable(circle src/calc/circle.c)
 add_executable(prime src/calc/prime.c)
 add_executable(trifx src/calc/trifx.c)
 add_executable(ClassTest src/ClassTest/ClassMain.cpp
-        src/ClassTest/Person.h)
+        src/ClassTest/Person.h
+        src/ClassTest/Person.cpp)
 add_executable(donut src/donut/donut.c)
 add_executable(cguess src/guess/guess.c)
 add_executable(guess src/guess/guess.cpp)

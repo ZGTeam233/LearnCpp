@@ -2,11 +2,11 @@
 #include <string>
 #include "Person.h"
 
+using namespace std;
+
 int main() {
-    Person p;
-    p.setAge(17);
-    p.setName("Jim");
-    std::cout << p.getAge() << " " << p.getName() << "\n" << std::endl;
-    p.eat();
+    Person p(17, "Jim");
+    print(cout, p) << endl;
+    p.set(18, "Tom").eat();
     return 0;
 }
