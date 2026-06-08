@@ -1,4 +1,4 @@
-# learn-cpp
+# LearnCpp
 学习 C/C++ 开发，源于项目“LearnCoding”
 
 #### 介绍

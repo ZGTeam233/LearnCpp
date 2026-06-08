@@ -16,7 +16,7 @@ add_executable(guess src/guess/guess.cpp)
 add_executable(StuSys src/StuSys/StuSys.cpp
         src/StuSys/Student.h)
 add_executable(grade src/StuSys/grade.cpp)
-add_executable(cpp-api src/cpp-api.cpp)
+add_executable(CppApi src/CppApi.cpp)
 add_executable(Sales src/Sales/Sales_main.cpp
         src/Sales/Sales_item.h
         src/Sales/Sales_data.h
