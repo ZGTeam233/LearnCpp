@@ -21,4 +21,6 @@ add_executable(CppApi src/CppApi.cpp)
 add_executable(Sales src/Sales/Sales_main.cpp
         src/Sales/Sales_item.h
         src/Sales/Sales_data.h
-        src/Sales/Sales_data.cpp)
+        src/Sales/Sales_data.cpp
+        src/Sales/DebugErr.h
+        src/Sales/DebugErr.cpp)

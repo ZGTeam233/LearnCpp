@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include "Sales_data.h"
+#include "DebugErr.h"
 
 using namespace std;
 
@@ -30,7 +31,7 @@ int main() {
         print(cout, total) << endl; // 输出最后一本书的结果
     } else {
         // 没有输入，给出提示
-        cerr << "No data?!" << endl;
+        print(cout, DebugErr('e', __FILE_NAME__, __FUNCTION__,__LINE__, "No data?"));
         return -1;
     }
     return 0;
