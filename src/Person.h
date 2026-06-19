@@ -5,8 +5,8 @@
 #include <string>
 
 class Person {
-friend std::istream &read(std::istream&, Person&);
-friend std::ostream &print(std::ostream&, const Person&);
+friend std::istream &operator>>(std::istream&, Person&);
+friend std::ostream &operator<<(std::ostream&, const Person&);
 
 public:
     Person() = default;
@@ -43,7 +43,7 @@ private:
     }
 };
 
-std::istream &read(std::istream&, Person&);
-std::ostream &print(std::ostream&, const Person&);
+std::istream &operator>>(std::istream&, Person&);
+std::ostream &operator<<(std::ostream&, const Person&);
 
 #endif // PERSON_H

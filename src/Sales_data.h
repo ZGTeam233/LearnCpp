@@ -6,8 +6,8 @@
 
 class Sales_data {
 friend Sales_data add(const Sales_data&, const Sales_data&);
-friend std::ostream &print(std::ostream&, const Sales_data&);
-friend std::istream &read(std::istream&, Sales_data&);
+friend std::ostream &operator<<(std::ostream&, const Sales_data&);
+friend std::istream &operator>>(std::istream&, Sales_data&);
 public:
     // 构造函数
     Sales_data() = default;
@@ -31,7 +31,7 @@ private:
 
 // Sales_data类的非成员接口
 Sales_data add(const Sales_data&, const Sales_data&);
-std::ostream &print(std::ostream&, const Sales_data&);
-std::istream &read(std::istream&, Sales_data&);
+std::ostream &operator<<(std::ostream&, const Sales_data&);
+std::istream &operator>>(std::istream&, Sales_data&);
 
 #endif // SALES_DATA_H

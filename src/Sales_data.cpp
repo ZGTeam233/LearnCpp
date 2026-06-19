@@ -15,14 +15,17 @@ Sales_data& Sales_data::combine(const Sales_data &rhs) {
     return *this;                // 返回对象本身
 }
 
-std::istream &read(std::istream &is, Sales_data &item) {
+std::istream &operator>>(std::istream &is, Sales_data &item) {
     double price = 0;
     is >> item.bookNo >> item.units_sold >> price;
-    item.revenue = price * item.units_sold;
+    if (is)
+        item.revenue = price * item.units_sold;
+    else
+        item = Sales_data();
     return is;
 }
 
-std::ostream &print(std::ostream &os, const Sales_data &item) {
+std::ostream &operator<<(std::ostream &os, const Sales_data &item) {
     os << item.isbn() << " " << item.units_sold << " "
        << item.revenue << " " << item.avg_price();
     return os;
@@ -35,5 +38,5 @@ Sales_data add(const Sales_data &lhs, const Sales_data &rhs) {
 }
 
 Sales_data::Sales_data(std::istream &is) {
-    read(is, *this); // 将is绑定到当前对象并从中读取数据
+    is >> *this; // 将is绑定到当前对象并从中读取数据
 }

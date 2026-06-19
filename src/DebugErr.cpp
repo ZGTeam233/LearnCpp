@@ -3,7 +3,7 @@
 #include <iostream>
 #include "DebugErr.h"
 
-std::ostream &print(std::ostream &os, const DebugErr &err) {
+std::ostream &operator<<(std::ostream &os, const DebugErr &err) {
     if (err.level.empty()) {
         std::cerr << "No data?" << std::endl;
         return os;
@@ -15,7 +15,7 @@ std::ostream &print(std::ostream &os, const DebugErr &err) {
     os << "\t" <<err.tag << " ";
     if (err.line)
         os << "at line " << err.line << std::endl;
-    os << "\tCompiled on " << err.date << std::endl;
+    os << "\tCompiled on " << __DATE__ << std::endl;
     os << "\t" << err.msg << std::endl;
     return os;
 }

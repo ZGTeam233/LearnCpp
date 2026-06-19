@@ -8,7 +8,7 @@
 #include <map>
 
 class DebugErr {
-friend std::ostream &print(std::ostream&, const DebugErr&);
+friend std::ostream &operator<<(std::ostream&, const DebugErr&);
 public:
     DebugErr() = default;
     DebugErr(char lv, const std::string &f, const std::string &t, int ln,
@@ -28,9 +28,8 @@ private:
     };
     std::string level, file, tag;
     int line = 0;
-    const std::string date = __DATE__;
     std::string msg;
 };
-std::ostream &print(std::ostream&, const DebugErr&);
+std::ostream &operator<<(std::ostream&, const DebugErr&);
 
 #endif //DEBUG_ERR_H
