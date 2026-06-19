@@ -1,21 +1,14 @@
 #include <stdio.h>
 #include <math.h>
-#define SIN0 0.0002908882046
-#define PI 3.14159
-
-int guess() {
-    printf("1. circle\n2. prime number\n3. triangular function");
-}
+#include "calc.h"
 
 void circle() {
     double radius;
-    double circumference;
-    double square;
     printf("中文显示测试\n");
     printf("Please enter the radius of the circle: ");
     scanf("%lf", &radius);
-    circumference = 2 * PI * radius;
-    square = PI * radius * radius;
+    double circumference = 2 * PI * radius;
+    double square = PI * radius * radius;
     printf("The circumference of the circle is: %.2f\n", circumference);
     printf("The area of the circle is: %.2f\n", square);
 }
@@ -72,8 +65,6 @@ void trifx() {
     printf("Tangent(1') = %.4f\n", tan0);
     double sine = SIN0;
     double cosine = cos0;
-    double tangent;
-    double degree;
 
     //角度的倍数 multiple of the angle
     int n=2;
@@ -81,8 +72,8 @@ void trifx() {
         //计算 calculate
         sine = SIN0 * cosine + cos0 * sine;
         cosine = sqrt(1 - sine * sine);
-        tangent = sine / cosine;
-        degree = n / 60.0;
+        double tangent = sine / cosine;
+        double degree = n / 60.0;
         printf("Minute = %d\n", n);
         printf("Degree(%d') = %.4f\n", n, degree);
         printf("Sine(%d') = %.4f\n", n, sine);

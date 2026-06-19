@@ -6,4 +6,5 @@ void class_main();
 void guess();
 int sales_main();
 int grade_main();
+void stu_sys();
 #endif // CORE_H

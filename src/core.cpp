@@ -1,14 +1,16 @@
 // Created by wsnzg6 on 2026/6/19.
 
 #include <iostream>
+#include <string>
 #include <vector>
-#include "Person.h"
-#include "Sales_data.h"
-#include "DebugErr.h"
-#include "grade.h"
+#include "modules/Person.h"
+#include "modules/Sales_data.h"
+#include "modules/DebugErr.h"
+#include "modules/grade.h"
+#include "modules/Student.h"
 
 void class_main() {
-    Person p(17, "Jim");
+    ps::Person p(17, "Jim");
     std::cout << p << std::endl;
     p.set(18, "Tom").eat();
 }
@@ -143,4 +145,66 @@ int grade_main() {
                 break;
         }
     }
+}
+
+void stu_sys() {
+    std::vector<Student> students;  // 存储学生信息的动态数组
+    int choice;
+
+    do {
+        // 菜单界面
+        std::cout << "\n=== 学生成绩管理系统 ===" << std::endl;
+        std::cout << "1. 添加学生信息" << std::endl;
+        std::cout << "2. 显示所有学生" << std::endl;
+        std::cout << "3. 计算平均成绩" << std::endl;
+        std::cout << "0. 退出程序" << std::endl;
+        std::cout << "请输入操作选项: ";
+        std::cin >> choice;
+
+        switch (choice) {
+            case 1: {
+                std::string name, id;
+                double score;
+                std::cout << "请输入学号: ";
+                std::cin >> id;
+                std::cout << "请输入姓名: ";
+                std::cin >> name;
+                std::cout << "请输入成绩: ";
+                std::cin >> score;
+                students.emplace_back(name, id, score);  // 直接构造学生对象
+                std::cout << "✅ 添加成功！" << std::endl;
+                break;
+            }
+            case 2: {
+                if (students.empty()) {
+                    std::cout << "⚠️ 暂无学生信息！" << std::endl;
+                }
+                else {
+                    std::cout << "\n学生列表:" << std::endl;
+                    for (const auto& s : students) {
+                        s.display();
+                    }
+                }
+                break;
+            }
+            case 3: {
+                if (students.empty()) {
+                    std::cout << "⚠️ 暂无学生信息，无法计算平均分！" << std::endl;
+                }
+                else {
+                    double total = 0;
+                    for (const auto& s : students) {
+                        total += s.getScore();
+                    }
+                    std::cout << "📊 班级平均成绩: " << total / students.size() << std::endl;
+                }
+                break;
+            }
+            case 0:
+                std::cout << "👋 感谢使用，再见！" << std::endl;
+                break;
+            default:
+                std::cout << "❌ 无效选项，请重新输入！" << std::endl;
+        }
+    } while (choice != 0);
 }
