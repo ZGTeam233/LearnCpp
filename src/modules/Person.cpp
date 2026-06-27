@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Person.h"
+#include "Person.hpp"
 
 namespace ps {
     std::istream &operator>>(std::istream &is, Person &p) {

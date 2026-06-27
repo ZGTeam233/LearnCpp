@@ -2,7 +2,5 @@
 
 #ifndef GRADE_H
 #define GRADE_H
-int checkLevel();
-int checkScholarship();
-int showEvaluation();
+int checkLevel(), checkScholarship(), showEvaluation();
 #endif //GRADE_H

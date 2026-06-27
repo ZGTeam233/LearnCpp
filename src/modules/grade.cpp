@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <cctype>
 #include <string>
+#include "grade.hpp"
 
 int checkLevel() {
 	int grade;

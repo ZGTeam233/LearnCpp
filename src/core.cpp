@@ -3,11 +3,11 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "modules/Person.h"
-#include "modules/Sales_data.h"
-#include "modules/DebugErr.h"
-#include "modules/grade.h"
-#include "modules/Student.h"
+#include "modules/Person.hpp"
+#include "modules/Sales_data.hpp"
+#include "modules/DebugUtil.hpp"
+#include "modules/grade.hpp"
+#include "modules/Student.hpp"
 
 void class_main() {
     ps::Person p(17, "Jim");
@@ -94,7 +94,7 @@ int sales_main() {
         std::cout << total << std::endl; // 输出最后一本书的结果
     } else {
         // 没有输入，给出提示
-        std::cerr << DebugErr('e', __FILE_NAME__, __FUNCTION__,__LINE__, "No data?");
+        DebugLog::error(MAKE_DEBUG_ERR(__FUNCTION__, "No data?"));
         return -1;
     }
     return 0;

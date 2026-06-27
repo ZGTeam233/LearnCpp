@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-#include "core.h"
+#include "core.hpp"
 
 #ifdef _WIN32
 #include <windows.h>
@@ -13,13 +13,10 @@ int main() {
     SetConsoleCP(CP_UTF8); // 可选：同时设置输入代码页
 #endif // _WIN32
 
-    cout << "\n也是给这个C++学习项目" << endl;
-    cout << "\t加了一个主程序啊" << endl;
+    cout << "\n也是给这个C++学习项目\n\t加了一个主程序啊" << endl;
     cout << "\n请选择打开的项目" << endl;
-    cout << "\t1. 类与对象练习：Person" << endl;
-    cout << "\t2. C++猜数字" << endl;
-    cout << "\t3. C++ Primer：Sales_data" << endl;
-    cout << "\t4. 成绩管理系统" << endl;
+    cout << "\t1. 类与对象练习：Person\n\t2. C++猜数字" << endl;
+    cout << "\t3. C++ Primer：Sales_data\n\t4. 成绩管理系统" << endl;
     cout << "\t5. 学生管理系统" << endl;
     cout << "\t0. 退出" << endl;
     cout << "请选择：";

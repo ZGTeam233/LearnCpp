@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#include "calc.h"
+#include "../ccore.h"
 
 void circle() {
     double radius;

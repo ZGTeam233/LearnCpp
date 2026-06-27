@@ -1,6 +1,7 @@
 ﻿#include <stdio.h>
+#include "../ccore.h"
 
-int guess() {
+void guess() {
     int guess = 0;
     int attempts = 0; // 猜测次数
     const int password[5] = {42, 15, 7, 93, 28}; // 猜数字游戏答案
@@ -52,6 +53,4 @@ int guess() {
             break;
         }
     }
-
-    return 0;
 }

@@ -6,7 +6,6 @@
 
 // 学生类
 class Student {
-private:
     std::string name;   // 姓名
     std::string id;     // 学号
     double score;  // 成绩

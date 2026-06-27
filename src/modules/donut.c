@@ -1,22 +1,23 @@
 ﻿#include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include "../ccore.h"
 
-int k;
+int k = 0;
 double sin(), cos();
 
-int guess() {
-    float A = 0, B = 0, i, j, z[1760];
+void donut() {
+    double A = 0, B = 0, z[1760];
     char b[1760];
     
     printf("\x1b[2J");  // 清屏
     
-    for (;;) {
+    while (1) {
         memset(b, 32, 1760);  // 用空格填充
         memset(z, 0, 7040);   // 深度缓冲清零
         
-        for (j = 0; j < 6.28; j += 0.07) {          // theta
-            for (i = 0; i < 6.28; i += 0.02) {      // phi
+        for (double j = 0; j < 6.28; j += 0.07) {          // theta
+            for (double i = 0; i < 6.28; i += 0.02) {      // phi
                 float c = sin(i);
                 float d = cos(j);
                 float e = sin(A);
@@ -49,6 +50,4 @@ int guess() {
         A += 0.04;
         B += 0.02;
     }
-    
-    return 0;
 }

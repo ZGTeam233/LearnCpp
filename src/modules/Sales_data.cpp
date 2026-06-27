@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Sales_data.h"
+#include "Sales_data.hpp"
 
 double Sales_data::avg_price() const {
     if (units_sold)
