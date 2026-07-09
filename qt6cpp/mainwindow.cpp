@@ -1,6 +1,6 @@
+#include "mainwindow.h"
 #include <QMessageBox>
 #include <QVBoxLayout>
-#include "mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     // 设置窗口基本属性
