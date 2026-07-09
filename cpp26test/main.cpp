@@ -1,5 +1,6 @@
 #include <iostream>
 #include <thread>
+#include "ThreadGuard.h"
 
 using namespace std;
 
@@ -24,6 +25,10 @@ void test2() {
     t2.join();
 }
 
+void test3() {
+    ThreadGuard guard(thread(hello)); // 即使抛异常，析构也会 join
+}
+
 int main() {
     int choice = 0;
     cout << ": ";
@@ -31,6 +36,7 @@ int main() {
     switch (choice) {
         case 1: test1(); break;
         case 2: test2(); break;
+        case 3: test3(); break;
         default: break;
     }
     return 0;
