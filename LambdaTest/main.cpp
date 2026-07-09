@@ -31,9 +31,7 @@ int main() {
         passed_scores.end(),
         passed_scores.begin(),
         [bonus](int score) {
-            if (score + bonus < 100)
-                return score + bonus;
-            return 100;
+            return min(bonus + score, 100);
         });
 
     sort(passed_scores.begin(),
