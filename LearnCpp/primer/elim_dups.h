@@ -9,6 +9,7 @@
 #include <vector>
 
 namespace primer {
+    bool isShorter(const std::string&, const std::string&);
     void elimDups(std::vector<std::string>&);
 } // primer
 

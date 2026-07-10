@@ -9,6 +9,10 @@
 using namespace std;
 
 namespace primer {
+    bool isShorter(const std::string &s1, const std::string &s2) {
+        return s1.size() < s2.size();
+    }
+
     void elimDups(vector<string> &words) {
         sort(words.begin(), words.end());
         auto end_unique = unique(words.begin(), words.end());
