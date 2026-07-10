@@ -1,3 +1,8 @@
+//
+// Created by wsnzg6 on 2026/7/9.
+// Copyright(c) 2026 ZGTeam233.
+//
+
 #include <iostream>
 #include <thread>
 #include "ThreadGuard.h"

@@ -1,3 +1,7 @@
+//
+// Copyright(c) 2026 ZGTeam233.
+//
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 

@@ -1,3 +1,7 @@
+//
+// Copyright(c) 2026 ZGTeam233.
+//
+
 #include <QMessageBox>
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"

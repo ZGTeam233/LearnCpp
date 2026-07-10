@@ -1,4 +1,7 @@
+//
 // Created by wsnzg6 on 2026/7/9.
+// Copyright(c) 2026 ZGTeam233.
+//
 
 #ifndef THREADGUARD_H
 #define THREADGUARD_H

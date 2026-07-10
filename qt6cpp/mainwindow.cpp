@@ -1,3 +1,7 @@
+//
+// Copyright(c) 2026 ZGTeam233.
+//
+
 #include "mainwindow.h"
 #include <QMessageBox>
 #include <QVBoxLayout>

@@ -1,5 +1,8 @@
-#include "mainwindow.h"
+//
+// Copyright(c) 2026 ZGTeam233.
+//
 
+#include "mainwindow.h"
 #include <QApplication>
 
 int main(int argc, char *argv[]) {
