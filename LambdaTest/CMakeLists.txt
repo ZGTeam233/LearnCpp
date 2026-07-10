@@ -3,4 +3,7 @@ project(LambdaTest)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(LambdaTest main.cpp)
+add_executable(LambdaTest main.cpp
+        test1.cpp
+        test.h
+        test2.cpp)
