@@ -1,4 +1,8 @@
-﻿#include <stdio.h>
+﻿//
+// Copyright(c) 2025 ZGTeam233.
+//
+
+#include <stdio.h>
 #include <string.h>
 #include <math.h>
 #include "../ccore.h"

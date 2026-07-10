@@ -1,3 +1,8 @@
+//
+// Created by wsnzg6 on 2026/6/19.
+// Copyright(c) 2026 ZGTeam233.
+//
+
 #ifndef CCORE_H
 #define CCORE_H
 

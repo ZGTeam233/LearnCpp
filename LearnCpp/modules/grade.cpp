@@ -1,3 +1,7 @@
+//
+// Copyright(c) 2026 ZGTeam233.
+//
+
 #include <iostream>
 #include <cctype>
 #include <string>

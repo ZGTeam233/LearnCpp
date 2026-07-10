@@ -1,4 +1,7 @@
-// Created by ZGTeam233 on 2026/6/9.
+//
+// Created by wsnzg6 on 2026/6/9.
+// Copyright(c) 2026 ZGTeam233.
+//
 
 #include <iostream>
 #include "LogUtil.h"

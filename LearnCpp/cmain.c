@@ -1,4 +1,7 @@
+//
 // Created by wsnzg6 on 2026/6/19.
+// Copyright(c) 2026 ZGTeam233.
+//
 
 #include <stdio.h>
 #include "ccore.h"

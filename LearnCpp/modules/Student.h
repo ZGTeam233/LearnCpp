@@ -1,4 +1,8 @@
-﻿#ifndef STUDENT_H
+﻿//
+// Copyright(c) 2026 ZGTeam233.
+//
+
+#ifndef STUDENT_H
 #define STUDENT_H
 
 #include <iostream>

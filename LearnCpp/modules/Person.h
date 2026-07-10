@@ -1,4 +1,8 @@
-﻿#ifndef PERSON_H
+﻿//
+// Copyright(c) 2026 ZGTeam233.
+//
+
+#ifndef PERSON_H
 #define PERSON_H
 
 #include <iostream>

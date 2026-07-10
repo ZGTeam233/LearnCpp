@@ -1,4 +1,9 @@
-﻿#include <iostream>
+﻿//
+// Created by wsnzg6 on 2026/6/19.
+// Copyright(c) 2026 ZGTeam233.
+//
+
+#include <iostream>
 #include "core.h"
 
 #ifdef _WIN32
