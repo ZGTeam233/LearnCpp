@@ -3,11 +3,13 @@
 #ifndef CORE_H
 #define CORE_H
 
-void person_main();
+void use_person();
 void guess();
-int sales_main();
-int grade_main();
-void student_main();
-void screen_main();
+int use_sales();
+int use_grade();
+void use_student();
+void use_screen();
+void use_account();
+void use_elim();
 
 #endif // CORE_H

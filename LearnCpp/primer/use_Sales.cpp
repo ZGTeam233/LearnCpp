@@ -7,7 +7,7 @@
 using namespace std;
 using namespace primer;
 
-int sales_main() {
+int use_sales() {
     Sales_data total; // 保存和的变量
     cout << "<ISBN> <units_sold> <price>" << endl; // 提示输入格式
     // 读入第一笔交易，并确保有数据可以处理

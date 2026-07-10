@@ -15,9 +15,11 @@ namespace primer {
         static void rate(double);
     private:
         std::string owner;
-        double amount;
+        double amount = 0;
         static double interestRate;
         static double initRate();
+        static constexpr int period = 30;
+        double daily_tbl[period];
     };
 } // primer
 

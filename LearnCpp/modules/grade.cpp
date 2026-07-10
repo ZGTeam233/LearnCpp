@@ -153,7 +153,7 @@ int showEvaluation() {
 	return 0; // 正常退出函数
 }
 
-int grade_main() {
+int use_grade() {
     int choice;
 
     while (true) {

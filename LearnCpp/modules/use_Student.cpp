@@ -8,7 +8,7 @@
 using namespace std;
 using namespace student_sys;
 
-void student_main() {
+void use_student() {
     vector<Student> students;  // 存储学生信息的动态数组
     int choice;
 

@@ -7,6 +7,26 @@
 
 using namespace std;
 
+
+void use_primer() {
+    cout << "\n请选择打开的项目" << endl
+        << "\t1. C++ Primer：Sales_data" << endl
+        << "\t2. C++ Primer：Screen" << endl
+        << "\t3. C++ Primer：Account" << endl
+        << "\t4. C++ Primer：排序算法" << endl
+        << "\t0. 退出" << endl;
+    cout << "请选择: ";
+    int choice;
+    cin >> choice;
+    switch (choice) {
+        case 1: use_sales(); break;
+        case 2: use_screen(); break;
+        case 3: use_account(); break;
+        case 4: use_elim(); break;
+        default: break;
+    }
+}
+
 int main() {
 #ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
@@ -18,21 +38,19 @@ int main() {
         << "\n请选择打开的项目" << endl
         << "\t1. 类与对象练习：Person" << endl
         << "\t2. C++猜数字" << endl
-        << "\t3. C++ Primer：Sales_data" << endl
+        << "\t3. C++ Primer 系列" << endl
         << "\t4. 成绩管理系统" << endl
         << "\t5. 学生管理系统" << endl
-        << "\t6. C++ Primer：Screen" << endl
         << "\t0. 退出" << endl;
-    cout << "请选择：";
+    cout << "请选择: ";
     int choice;
     cin >> choice;
     switch (choice) {
-        case 1: person_main(); break;
+        case 1: use_person(); break;
         case 2: guess(); break;
-        case 3: sales_main(); break;
-        case 4: grade_main(); break;
-        case 5: student_main(); break;
-        case 6: screen_main(); break;
+        case 3: use_primer(); break;
+        case 4: use_grade(); break;
+        case 5: use_student(); break;
         default: break;
     }
     return 0;

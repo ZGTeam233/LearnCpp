@@ -24,7 +24,10 @@ add_executable(LearnCpp main.cpp
         modules/use_Student.cpp
         primer/Account.cpp
         primer/Account.h
-        primer/use_Account.cpp)
+        primer/use_Account.cpp
+        primer/elim_dups.cpp
+        primer/elim_dups.h
+        primer/use_elim.cpp)
 add_executable(LearnC cmain.c
         ccore.h
         cmodules/calc.c
