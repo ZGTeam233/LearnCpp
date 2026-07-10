@@ -25,9 +25,9 @@ add_executable(LearnCpp main.cpp
         primer/Account.cpp
         primer/Account.h
         primer/use_Account.cpp
-        primer/elim_dups.cpp
-        primer/elim_dups.h
-        primer/use_elim.cpp)
+        primer/biggies.cpp
+        primer/biggies.h
+        primer/use_biggies.cpp)
 add_executable(LearnC cmain.c
         ccore.h
         cmodules/calc.c

@@ -10,6 +10,7 @@ int use_grade();
 void use_student();
 void use_screen();
 void use_account();
-void use_elim();
+void use_sort();
+void use_biggies();
 
 #endif // CORE_H

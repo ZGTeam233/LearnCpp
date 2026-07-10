@@ -14,6 +14,7 @@ void use_primer() {
         << "\t2. C++ Primer：Screen" << endl
         << "\t3. C++ Primer：Account" << endl
         << "\t4. C++ Primer：排序算法" << endl
+        << "\t5. C++ Primer：算法和 Lambda" << endl
         << "\t0. 退出" << endl;
     cout << "请选择: ";
     int choice;
@@ -22,7 +23,8 @@ void use_primer() {
         case 1: use_sales(); break;
         case 2: use_screen(); break;
         case 3: use_account(); break;
-        case 4: use_elim(); break;
+        case 4: use_sort(); break;
+        case 5: use_biggies(); break;
         default: break;
     }
 }
