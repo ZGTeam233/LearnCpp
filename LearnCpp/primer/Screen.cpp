@@ -24,4 +24,13 @@ namespace primer {
         // 将那个选定的 Screen 重置为空白
         s.contents = string(s.height * s.width, ' ');
     }
+
+    Window_mgr::ScreenIndex Window_mgr::addScreen(const Screen &s) {
+        screens.push_back(s);
+        return screens.size() - 1;
+    }
+
+    void Screen::dummy_fcn(pos ht) {
+        cursor = width * height;
+    }
 } // primer

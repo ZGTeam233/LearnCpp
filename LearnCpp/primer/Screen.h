@@ -6,40 +6,47 @@
 #include <vector>
 
 namespace primer {
-    class Window_mgr;
+    class Screen;
+
+    class Window_mgr {
+    public:
+        Window_mgr();
+        using ScreenIndex = std::vector<Screen>::size_type; // 窗口中每个屏幕的编号
+        void clear(ScreenIndex); // 按照编号将指定的 Screen 充重置为空白
+        ScreenIndex addScreen(const Screen&); // 向窗口添加一个 Screen，返回它的编号
+    private:
+        /**
+         * 表示这个 Window_mgr 追踪的 Screen
+         * 默认情况下，一个 Window_mgr 包含一个
+         * 标准尺寸的空白 Screen
+         */
+        std::vector<Screen> screens;
+    }; // Window_mgr
 
     class Screen {
-        // Window_mgr 的成员可以访问 Screen 类的私有部分
-        friend class Window_mgr;
+        // Window_mgr::clear 必须在 Screen 类之前被声明
+        friend void Window_mgr::clear(Window_mgr::ScreenIndex);
     public:
         typedef std::string::size_type pos;
 
+        // 构造函数
         Screen() = default;
         Screen(pos ht, pos wd, char c): height(ht), width(wd),
             contents(ht * wd, c) {}
         Screen(pos ht, pos wd): Screen(ht, wd, ' ') {}
 
-        char get() const {
-            return contents[cursor]; // 读取光标处的字符
-        }
+        // 普通方法
+        void some_member() const;
+        void dummy_fcn(pos);
 
+        // inline 函数
+        char get() const { return contents[cursor]; } // 读取光标处的字符
         inline char get(pos, pos) const; // 声明处 inline
         Screen &move(pos, pos); // 定义处 inline
-
-        void some_member() const;
-
+        Screen &display(std::ostream&);
+        const Screen &display(std::ostream&) const;
         Screen &set(char);
         Screen &set(pos, pos, char);
-
-        Screen &display(std::ostream &os) {
-            do_display(os);
-            return *this;
-        }
-
-        const Screen &display(std::ostream &os) const {
-            do_display(os);
-            return *this;
-        }
 
     private:
         pos cursor = 0; // 光标位置
@@ -49,27 +56,11 @@ namespace primer {
         void do_display(std::ostream&) const;
     }; // Screen
 
-    class Window_mgr {
-    public:
-        // 窗口中每个屏幕的编号
-        using ScreenIndex = std::vector<Screen>::size_type;
-
-        // 按照编号将指定的 Screen 充重置为空白
-        void clear(ScreenIndex);
-    private:
-        /**
-         * 表示这个 Window_mgr 追踪的 Screen
-         * 默认情况下，一个 Window_mgr 包含一个
-         * 标准尺寸的空白 Screen
-         */
-        std::vector<Screen> screens{Screen(24, 80, ' ')};
-    }; // Window_mgr
-
-#ifndef NDEBUG
-    std::ostream &operator<<(std::ostream&, const Screen&);
-#endif // NDEBUG
-
     // 内联函数一定要在头文件中定义
+
+    inline Window_mgr::Window_mgr() {
+        screens.push_back(Screen(24, 80, ' '));
+    }
 
     // 定义处 inline
     inline Screen &Screen::move(pos r, pos c) {
@@ -82,6 +73,16 @@ namespace primer {
     char Screen::get(pos r, pos c) const {
         pos row = r * width;
         return contents[row + c];
+    }
+
+    inline Screen &Screen::display(std::ostream &os) {
+        do_display(os);
+        return *this;
+    }
+
+    inline const Screen &Screen::display(std::ostream &os) const {
+        do_display(os);
+        return *this;
     }
 
     inline Screen &Screen::set(char c) {

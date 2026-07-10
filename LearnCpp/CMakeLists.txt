@@ -8,21 +8,23 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(LearnCpp main.cpp
         modules/Person.h
         modules/Person.cpp
-        modules/Person_main.cpp
+        modules/use_Person.cpp
         core.h
-        primer/Sales_item.h
         primer/Sales_data.h
         primer/Sales_data.cpp
-        primer/Sales_main.cpp
+        primer/use_Sales.cpp
         logutil/LogUtil.h
         logutil/LogUtil.cpp
         modules/Student.h
         primer/Screen.h
         primer/Screen.cpp
-        primer/Screen_main.cpp
+        primer/use_Screen.cpp
         modules/guess.cpp
         modules/grade.cpp
-        modules/Student_main.cpp)
+        modules/use_Student.cpp
+        primer/Account.cpp
+        primer/Account.h
+        primer/use_Account.cpp)
 add_executable(LearnC cmain.c
         ccore.h
         cmodules/calc.c
