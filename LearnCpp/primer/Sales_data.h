@@ -6,7 +6,7 @@
 
 namespace primer {
     class Sales_data {
-        friend Sales_data add(const Sales_data&, const Sales_data&);
+        friend Sales_data operator+(const Sales_data&, const Sales_data&);
         friend std::ostream &operator<<(std::ostream&, const Sales_data&);
         friend std::istream &operator>>(std::istream&, Sales_data&);
     public:
@@ -18,7 +18,7 @@ namespace primer {
 
         // 成员函数
         std::string isbn() const { return bookNo; }
-        Sales_data& combine(const Sales_data&);
+        Sales_data& operator+=(const Sales_data&);
 
     private:
         // 作为实现细节的成员函数
@@ -31,7 +31,7 @@ namespace primer {
     };
 
     // Sales_data类的非成员接口
-    Sales_data add(const Sales_data&, const Sales_data&);
+    Sales_data operator+(const Sales_data&, const Sales_data&);
     std::ostream &operator<<(std::ostream&, const Sales_data&);
     std::istream &operator>>(std::istream&, Sales_data&);
 } // primer

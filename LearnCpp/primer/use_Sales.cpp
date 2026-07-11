@@ -18,7 +18,7 @@ int use_sales() {
         while (cin >> trans) {
             // 如果我们仍在处理相同的书
             if (total.isbn() == trans.isbn())
-                total.combine(trans); // 更新总销售额
+                total += trans; // 更新总销售额
             else {
                 // 输出前一本书的结果
                 cout << total << endl; // 打印结果并换行

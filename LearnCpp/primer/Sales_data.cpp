@@ -12,7 +12,7 @@ namespace primer {
             return 0;
     }
 
-    Sales_data& Sales_data::combine(const Sales_data &rhs) {
+    Sales_data& Sales_data::operator+=(const Sales_data &rhs) {
         units_sold += rhs.units_sold; // 叠加销售数量
         revenue += rhs.revenue;       // 叠加销售收入
         return *this;                // 返回对象本身
@@ -34,9 +34,9 @@ namespace primer {
         return os;
     }
 
-    Sales_data add(const Sales_data &lhs, const Sales_data &rhs) {
+    Sales_data operator+(const Sales_data &lhs, const Sales_data &rhs) {
         Sales_data sum = lhs; // 复制左操作数到sum中
-        sum.combine(rhs);     // 将右操作数的数据添加到sum中
+        sum += rhs;     // 将右操作数的数据添加到sum中
         return sum;          // 返回sum
     }
 
