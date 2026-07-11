@@ -55,4 +55,4 @@ public:
     }
 };
 
-#endif // MOVETEST_SIMPLESTRING_H
+#endif //MOVETEST_SIMPLESTRING_H

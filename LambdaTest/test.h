@@ -3,10 +3,10 @@
 // Copyright(c) 2026 ZGTeam233.
 //
 
-#ifndef TEST_H
-#define TEST_H
+#ifndef LAMBDATEST_TEST_H
+#define LAMBDATEST_TEST_H
 
 void test1();
 void test2();
 
-#endif // TEST_H
+#endif //LAMBDATEST_TEST_H

@@ -2,8 +2,8 @@
 // Copyright(c) 2026 ZGTeam233.
 //
 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef QTTEST_MAINWINDOW_H
+#define QTTEST_MAINWINDOW_H
 
 #include <QMainWindow>
 #include <QLabel>
@@ -22,4 +22,4 @@ private:
 
 }; // MainWindow
 
-#endif // MAINWINDOW_H
+#endif //QTTEST_MAINWINDOW_H

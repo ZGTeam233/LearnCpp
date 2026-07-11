@@ -3,8 +3,8 @@
 // Copyright(c) 2026 ZGTeam233.
 //
 
-#ifndef THREADGUARD_H
-#define THREADGUARD_H
+#ifndef THREADTEST_THREADGUARD_H
+#define THREADTEST_THREADGUARD_H
 
 #include <thread>
 
@@ -24,4 +24,4 @@ public:
     ThreadGuard &operator=(const ThreadGuard&) = delete;
 };
 
-#endif // THREADGUARD_H
+#endif //THREADTEST_THREADGUARD_H

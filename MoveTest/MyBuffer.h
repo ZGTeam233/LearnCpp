@@ -3,8 +3,8 @@
 // Copyright(c) 2026 ZGTeam233.
 //
 
-#ifndef MYBUFFER_H
-#define MYBUFFER_H
+#ifndef MOVETEST_MYBUFFER_H
+#define MOVETEST_MYBUFFER_H
 
 #include <iostream>
 
@@ -35,4 +35,4 @@ struct MyBuffer {
     }
 };
 
-#endif // MYBUFFER_H
+#endif //MOVETEST_MYBUFFER_H

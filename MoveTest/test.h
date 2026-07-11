@@ -9,4 +9,4 @@
 void use_my_buffer();
 void use_simple_string();
 
-#endif // MOVETEST_TEST_H
+#endif //MOVETEST_TEST_H
