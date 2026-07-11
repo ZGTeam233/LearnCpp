@@ -14,7 +14,7 @@
 #include <fstream>
 
 
-namespace std_done {
+namespace done {
     // 待办事项管理类
     class TodoList {
         std::vector<Task> tasks;
@@ -29,6 +29,6 @@ namespace std_done {
         void completeTask(int index);
         void deleteTask(int index);
     };
-} // std_done
+} // done
 
 #endif //LEARNCPP_TODOLIST_H

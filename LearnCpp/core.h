@@ -15,5 +15,6 @@ void use_screen();
 void use_account();
 void use_sort();
 void use_biggies();
+void done_main();
 
 #endif //LEARNCPP_CORE_H

@@ -53,6 +53,7 @@ int main() {
         << "\t3. C++ Primer 系列" << endl
         << "\t4. 成绩管理系统" << endl
         << "\t5. 学生管理系统" << endl
+        << "\t6. std::done 一个 Todo 应用" << endl
         << "\t0. 退出" << endl;
     cout << "请选择: ";
     int choice;
@@ -67,6 +68,8 @@ int main() {
     case 4: use_grade();
         break;
     case 5: use_student();
+        break;
+    case 6: done_main();
         break;
     default: break;
     }

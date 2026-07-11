@@ -31,6 +31,7 @@ add_executable(LearnCpp main.cpp
         std_done/Task.h
         std_done/TodoList.cpp
         std_done/TodoList.h
+        std_done/done_main.cpp
 )
 add_executable(LearnC cmain.c
         ccore.h

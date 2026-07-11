@@ -8,7 +8,7 @@
 
 #include <string>
 
-namespace std_done {
+namespace done {
     // 定义“任务”结构体
     struct Task {
         std::string description;
@@ -18,6 +18,6 @@ namespace std_done {
             : description(desc), isCompleted(completed) {
         }
     };
-} // std_done
+} // done
 
 #endif //LEARNCPP_TASK_H
