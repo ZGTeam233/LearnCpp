@@ -19,7 +19,7 @@ vector<string> words{
 
 void use_sort() {
     sort_words(words);
-    for (const auto &s: words) {
+    for (const auto& s : words) {
         cout << s << " ";
     }
     cout << endl;

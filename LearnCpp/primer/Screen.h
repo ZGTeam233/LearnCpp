@@ -1,5 +1,5 @@
-#ifndef SCREEN_H
-#define SCREEN_H
+#ifndef LEARNCPP_SCREEN_H
+#define LEARNCPP_SCREEN_H
 
 #include <iostream>
 #include <string>
@@ -26,14 +26,19 @@ namespace primer {
     class Screen {
         // Window_mgr::clear 必须在 Screen 类之前被声明
         friend void Window_mgr::clear(Window_mgr::ScreenIndex);
+
     public:
         typedef std::string::size_type pos;
 
         // 构造函数
         Screen() = default;
-        Screen(pos ht, pos wd, char c): height(ht), width(wd),
-            contents(ht * wd, c) {}
-        Screen(pos ht, pos wd): Screen(ht, wd, ' ') {}
+
+        Screen(pos ht, pos wd, char c) : height(ht), width(wd),
+                                         contents(ht * wd, c) {
+        }
+
+        Screen(pos ht, pos wd) : Screen(ht, wd, ' ') {
+        }
 
         // 普通方法
         void some_member() const;
@@ -42,11 +47,11 @@ namespace primer {
         // inline 函数
         char get() const { return contents[cursor]; } // 读取光标处的字符
         inline char get(pos, pos) const; // 声明处 inline
-        Screen &move(pos, pos); // 定义处 inline
-        Screen &display(std::ostream&);
-        const Screen &display(std::ostream&) const;
-        Screen &set(char);
-        Screen &set(pos, pos, char);
+        Screen& move(pos, pos); // 定义处 inline
+        Screen& display(std::ostream&);
+        const Screen& display(std::ostream&) const;
+        Screen& set(char);
+        Screen& set(pos, pos, char);
 
     private:
         pos cursor = 0; // 光标位置
@@ -63,7 +68,7 @@ namespace primer {
     }
 
     // 定义处 inline
-    inline Screen &Screen::move(pos r, pos c) {
+    inline Screen& Screen::move(pos r, pos c) {
         pos row = r * width; // 计算行的位置
         cursor = row + c;
         return *this;
@@ -75,25 +80,25 @@ namespace primer {
         return contents[row + c];
     }
 
-    inline Screen &Screen::display(std::ostream &os) {
+    inline Screen& Screen::display(std::ostream& os) {
         do_display(os);
         return *this;
     }
 
-    inline const Screen &Screen::display(std::ostream &os) const {
+    inline const Screen& Screen::display(std::ostream& os) const {
         do_display(os);
         return *this;
     }
 
-    inline Screen &Screen::set(char c) {
+    inline Screen& Screen::set(char c) {
         contents[cursor] = c;
         return *this;
     }
 
-    inline Screen &Screen::set(pos r, pos col, char ch) {
+    inline Screen& Screen::set(pos r, pos col, char ch) {
         contents[r * width + col] = ch;
         return *this;
     }
 } // primer
 
-#endif // SCREEN_H
+#endif //LEARNCPP_SCREEN_H

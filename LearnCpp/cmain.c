@@ -10,7 +10,7 @@
 #include <windows.h>
 #endif // _WIN32
 
-int main () {
+int main() {
 #ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
 #endif // _WIN32
@@ -27,12 +27,17 @@ int main () {
     int choice = 0;
     scanf("%d", &choice);
     switch (choice) {
-        case 1: circle(); break;
-        case 2: prime(); break;
-        case 3: trifx(); break;
-        case 4: donut(); break;
-        case 5: guess(); break;
-        default: break;
+    case 1: circle();
+        break;
+    case 2: prime();
+        break;
+    case 3: trifx();
+        break;
+    case 4: donut();
+        break;
+    case 5: guess();
+        break;
+    default: break;
     }
     return 0;
 }

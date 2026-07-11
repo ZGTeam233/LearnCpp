@@ -30,7 +30,8 @@ void prime() {
     //输入两个数
     int m;
     int n;
-    printf("Please enter two numbers.\nThe first number must be less than or equal to the second number.\nEnter first number: ");
+    printf(
+        "Please enter two numbers.\nThe first number must be less than or equal to the second number.\nEnter first number: ");
     scanf("%d", &m);
     printf("Enter second number: ");
     scanf("%d", &n);
@@ -71,7 +72,7 @@ void trifx() {
     double cosine = cos0;
 
     //角度的倍数 multiple of the angle
-    int n=2;
+    int n = 2;
     do {
         //计算 calculate
         sine = SIN0 * cosine + cos0 * sine;
@@ -86,6 +87,7 @@ void trifx() {
         printf("---------------\n");
         printf("\n");
         n++;
-    } while (n <= 5400);
+    }
+    while (n <= 5400);
 }
 

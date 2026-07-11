@@ -12,22 +12,25 @@ add_executable(LearnCpp main.cpp
         core.h
         primer/Sales_data.h
         primer/Sales_data.cpp
-        primer/use_Sales.cpp
+        primer/use_sales.cpp
         logutil/LogUtil.h
         logutil/LogUtil.cpp
         modules/Student.h
         primer/Screen.h
         primer/Screen.cpp
-        primer/use_Screen.cpp
+        primer/use_screen.cpp
         modules/guess.cpp
         modules/grade.cpp
         modules/use_Student.cpp
         primer/Account.cpp
         primer/Account.h
-        primer/use_Account.cpp
+        primer/use_account.cpp
         primer/biggies.cpp
         primer/biggies.h
         primer/use_biggies.cpp
+        std_done/Task.h
+        std_done/TodoList.cpp
+        std_done/TodoList.h
 )
 add_executable(LearnC cmain.c
         ccore.h

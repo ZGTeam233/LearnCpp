@@ -12,7 +12,7 @@ using namespace std;
 void guess() {
     int guess = 0;
     int attempts = 0; // 猜测次数
-    vector<int> password = { 42, 15, 7, 93, 28 }; // 猜数字游戏答案
+    vector<int> password = {42, 15, 7, 93, 28}; // 猜数字游戏答案
     int round = 0; // 当前轮数
     int choice;
     cout << "Welcome to the Guessing Game!" << endl;
@@ -28,12 +28,14 @@ void guess() {
 
             if (guess < password[round]) {
                 cout << "Too low! Try again." << endl; // 猜测过低
-            } else if (guess > password[round]) {
+            }
+            else if (guess > password[round]) {
                 cout << "Too high! Try again." << endl; // 猜测过高
-            } else {
+            }
+            else {
                 // 猜测正确
                 cout << "Congratulations! You've guessed the correct number: "
-                        << password[round] << "." << endl;
+                    << password[round] << "." << endl;
                 if (round == 4) {
                     // 完成所有轮次
                     cout << "You've completed all rounds! Well done!" << endl;
@@ -60,7 +62,7 @@ void guess() {
         else {
             // 超过七次未猜中
             cout << "Sorry, you've used all your attempts. The correct number was "
-                    << password[round] << "." << endl;
+                << password[round] << "." << endl;
             break;
         }
     }

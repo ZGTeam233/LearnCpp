@@ -2,8 +2,8 @@
 // Copyright(c) 2026 ZGTeam233.
 //
 
-#ifndef STUDENT_H
-#define STUDENT_H
+#ifndef LEARNCPP_STUDENT_H
+#define LEARNCPP_STUDENT_H
 
 #include <iostream>
 #include <string>
@@ -11,13 +11,14 @@
 namespace student_sys {
     // 学生类
     class Student {
-        std::string name;   // 姓名
-        std::string id;     // 学号
-        double score;  // 成绩
+        std::string name; // 姓名
+        std::string id; // 学号
+        double score; // 成绩
 
     public:
         // 构造函数
-        Student(std::string n, std::string i, double s) : name(n), id(i), score(s) {}
+        Student(std::string n, std::string i, double s) : name(n), id(i), score(s) {
+        }
 
         // 显示学生信息
         void display() const {
@@ -27,6 +28,5 @@ namespace student_sys {
         // 获取成绩（用于计算平均分）
         double getScore() const { return score; }
     };
-
 } // student_sys
-#endif // STUDENT_H
+#endif //LEARNCPP_STUDENT_H

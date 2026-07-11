@@ -2,8 +2,8 @@
 // Created by wsnzg6 on 2026/7/10.
 //
 
-#ifndef ACCOUNT_H
-#define ACCOUNT_H
+#ifndef LEARNCPP_ACCOUNT_H
+#define LEARNCPP_ACCOUNT_H
 
 #include <string>
 
@@ -13,6 +13,7 @@ namespace primer {
         void calculate() { amount += amount * interestRate; }
         static double rate() { return interestRate; }
         static void rate(double);
+
     private:
         std::string owner;
         double amount = 0;
@@ -23,4 +24,4 @@ namespace primer {
     };
 } // primer
 
-#endif // ACCOUNT_H
+#endif //LEARNCPP_ACCOUNT_H

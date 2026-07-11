@@ -3,8 +3,8 @@
 // Copyright(c) 2026 ZGTeam233.
 //
 
-#ifndef CORE_H
-#define CORE_H
+#ifndef LEARNCPP_CORE_H
+#define LEARNCPP_CORE_H
 
 void use_person();
 void guess();
@@ -16,4 +16,4 @@ void use_account();
 void use_sort();
 void use_biggies();
 
-#endif // CORE_H
+#endif //LEARNCPP_CORE_H

@@ -2,20 +2,23 @@
 // Copyright(c) 2026 ZGTeam233.
 //
 
-#ifndef PERSON_H
-#define PERSON_H
+#ifndef LEARNCPP_PERSON_H
+#define LEARNCPP_PERSON_H
 
 #include <iostream>
 #include <string>
 
 namespace ps {
     class Person {
-        friend std::istream &operator>>(std::istream&, Person&);
-        friend std::ostream &operator<<(std::ostream&, const Person&);
+        friend std::istream& operator>>(std::istream&, Person&);
+        friend std::ostream& operator<<(std::ostream&, const Person&);
 
     public:
         Person() = default;
-        Person(int a, const std::string &n) : age(a), name(n) {}
+
+        Person(int a, const std::string& n) : age(a), name(n) {
+        }
+
         Person(std::istream&);
 
         void eat() const {
@@ -23,17 +26,17 @@ namespace ps {
             std::cout << "He is " << age << " years old." << std::endl;
         }
 
-        Person &get(int &a, std::string &n) {
+        Person& get(int& a, std::string& n) {
             doGet(a, n);
             return *this;
         }
 
-        const Person &get(int &a, std::string &n) const {
+        const Person& get(int& a, std::string& n) const {
             doGet(a, n);
             return *this;
         }
 
-        Person &set(int a, const std::string &n) {
+        Person& set(int a, const std::string& n) {
             age = a;
             name = n;
             return *this;
@@ -42,14 +45,14 @@ namespace ps {
     private:
         int age = 0;
         std::string name;
-        void doGet(int &a, std::string &n) const {
+
+        void doGet(int& a, std::string& n) const {
             a = age;
             n = name;
         }
     };
 
-    std::istream &operator>>(std::istream&, Person&);
-    std::ostream &operator<<(std::ostream&, const Person&);
-
+    std::istream& operator>>(std::istream&, Person&);
+    std::ostream& operator<<(std::ostream&, const Person&);
 } // ps
-#endif // PERSON_H
+#endif //LEARNCPP_PERSON_H

@@ -25,12 +25,17 @@ void use_primer() {
     int choice;
     cin >> choice;
     switch (choice) {
-        case 1: use_sales(); break;
-        case 2: use_screen(); break;
-        case 3: use_account(); break;
-        case 4: use_sort(); break;
-        case 5: use_biggies(); break;
-        default: break;
+    case 1: use_sales();
+        break;
+    case 2: use_screen();
+        break;
+    case 3: use_account();
+        break;
+    case 4: use_sort();
+        break;
+    case 5: use_biggies();
+        break;
+    default: break;
     }
 }
 
@@ -53,12 +58,17 @@ int main() {
     int choice;
     cin >> choice;
     switch (choice) {
-        case 1: use_person(); break;
-        case 2: guess(); break;
-        case 3: use_primer(); break;
-        case 4: use_grade(); break;
-        case 5: use_student(); break;
-        default: break;
+    case 1: use_person();
+        break;
+    case 2: guess();
+        break;
+    case 3: use_primer();
+        break;
+    case 4: use_grade();
+        break;
+    case 5: use_student();
+        break;
+    default: break;
     }
     return 0;
 }

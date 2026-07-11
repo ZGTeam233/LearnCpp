@@ -26,16 +26,19 @@ void guess() {
 
             if (guess < password[round]) {
                 printf("Too low! Try again.\n"); // 猜测过低
-            } else if (guess > password[round]) {
+            }
+            else if (guess > password[round]) {
                 printf("Too high! Try again.\n"); // 猜测过高
-            } else {
+            }
+            else {
                 // 猜测正确
                 printf("Congratulations! You've guessed the correct number: %d\n", password[round]);
                 if (round == 4) {
                     // 完成所有轮次
                     printf("You've completed all rounds! Well done!\n");
                     break;
-                } else {
+                }
+                else {
                     // 询问是否继续下一轮
                     printf("Wanna try the next number? Input 1 to continue or 0 to quit: ");
                     scanf("%d", &choice);
@@ -44,14 +47,16 @@ void guess() {
                         round++;
                         attempts = 0;
                         guess = 0;
-                    } else {
+                    }
+                    else {
                         // 退出游戏
                         printf("Thanks for playing! Goodbye!\n");
                         break;
                     }
                 }
             }
-        } else {
+        }
+        else {
             // 超过七次未猜中
             printf("Sorry, you've used all your attempts. The correct number was %d.\n", password[round]);
             break;

@@ -10,7 +10,7 @@ using namespace primer;
 void use_account() {
     double r = Account::rate();
     Account ac1;
-    Account *ac2 = &ac1;
+    Account* ac2 = &ac1;
     r = ac1.rate();
     r = ac2->rate();
 }

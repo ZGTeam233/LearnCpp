@@ -26,7 +26,8 @@ int use_sales() {
             }
         }
         cout << total << endl; // 输出最后一本书的结果
-    } else {
+    }
+    else {
         // 没有输入，给出提示
         LOG_ERROR(__FUNCTION__, "No data?");
         return -1;
