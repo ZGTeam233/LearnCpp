@@ -63,4 +63,4 @@ build/
 # 6. IDE 与编辑器配置
 # ==========================================
 # JetBrains 系列 IDE (如 CLion, IntelliJ IDEA 等) 配置目录
-.idea/
+../cpp26test/.idea/

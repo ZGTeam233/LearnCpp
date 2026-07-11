@@ -2,7 +2,7 @@
 
 ---
 ### Sales 版权与免责声明
-本文件夹，包含来自《C++ Primer 第5版》的代码，
+`/LearnCpp/primer` 文件夹，包含来自《C++ Primer 第5版》的代码，
 
 作者为 *Stanley B. Lippman*、*Josee Lajoie* 和 *Barbara E. Moo*，
 
@@ -57,6 +57,8 @@ Fax: (201) 236-3290
 
 ---
 ### donut 免责声明
+
+[`LearnCpp/cmodules/donut.c`](LearnCpp/cmodules/donut.c)
 
 经典 *ASCII* 甜甜圈的 *C语言*实现，最初由 *Andy Sloane* 于 2011 年创建。
 

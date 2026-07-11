@@ -6,22 +6,20 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
-QT_BEGIN_NAMESPACE
-namespace Ui {
-class MainWindow;
-} // Ui
-QT_END_NAMESPACE
+#include <QLabel>
+#include <QPushButton>
 
 class MainWindow : public QMainWindow {
-    Q_OBJECT
+    Q_OBJECT // 必须有， 为了信号槽
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow() override;
+    ~MainWindow() override = default;
 
 private:
-    Ui::MainWindow *ui;
-};
+    QLabel *label;
+    QPushButton *button;
+
+}; // MainWindow
 
 #endif // MAINWINDOW_H

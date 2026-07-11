@@ -27,7 +27,8 @@ add_executable(LearnCpp main.cpp
         primer/use_Account.cpp
         primer/biggies.cpp
         primer/biggies.h
-        primer/use_biggies.cpp)
+        primer/use_biggies.cpp
+)
 add_executable(LearnC cmain.c
         ccore.h
         cmodules/calc.c
