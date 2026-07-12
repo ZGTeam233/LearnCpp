@@ -13,6 +13,7 @@
 using namespace std;
 
 int main() {
+    // 设置中文
 #ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
