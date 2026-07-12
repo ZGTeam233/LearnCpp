@@ -4,8 +4,11 @@ project(MoveTest)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(MoveTest main.cpp
-        MyBuffer.h
-        use_MyBuffer.cpp
+        my_buffer/MyBuffer.h
+        my_buffer/use_my_buffer.cpp
         test.h
-        use_SimpleString.cpp
-        SimpleString.h)
+        simple_string/use_simple_str.cpp
+        simple_string/SimpleString.h
+        resource_pool/Node.h
+        resource_pool/ResourcePool.h
+        resource_pool/test_res_pool.cpp)

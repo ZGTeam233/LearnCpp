@@ -7,6 +7,7 @@
 #define MOVETEST_TEST_H
 
 void use_my_buffer();
-void use_simple_string();
+void use_simple_str();
+void test_res_pool();
 
 #endif //MOVETEST_TEST_H

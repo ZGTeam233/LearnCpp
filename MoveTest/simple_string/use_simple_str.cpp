@@ -5,9 +5,11 @@
 
 #include <iostream>
 #include "SimpleString.h"
-#include "test.h"
+#include "../test.h"
 
-void use_simple_string() {
+using namespace simple_string;
+
+void use_simple_str() {
     std::cout << "--- 测试开始 ---\n";
     SimpleString s1("Hello");
     SimpleString s2("World");

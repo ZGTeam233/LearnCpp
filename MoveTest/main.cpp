@@ -22,8 +22,12 @@ int main() {
     cout << ": ";
     cin >> choice;
     switch (choice) {
-        case 1: use_my_buffer(); break;
-        case 2: use_simple_string(); break;
+        case 1: use_my_buffer();
+            break;
+        case 2: use_simple_str();
+            break;
+        case 3: test_res_pool();
+            break;
         default: break;
     }
     return 0;
