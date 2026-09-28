@@ -1,0 +1,119 @@
+# =========================
+# 编译输出 / 构建目录
+# =========================
+x64/
+Debug/
+Release/
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+
+# 可执行文件、库、对象文件
+*.exe
+*.dll
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.obj
+*.idb
+*.pch
+*.gch
+*.o
+*.a
+*.so
+*.dylib
+*.out
+a.out
+
+# Visual Studio 中间文件
+*.tlog
+*.lastbuildstate
+*.recipe
+*.log
+*.db
+*.db-shm
+*.db-wal
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+*.vsidx
+*.suo
+*.user
+*.rsuser
+*.sln.docstates
+*.userosscache
+*.ipch
+*.iobj
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tlh
+*.tmp
+*.tmp_proj
+*.cache
+
+# =========================
+# Visual Studio
+# =========================
+.vs/
+*.vcxproj.user
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 虚拟环境
+.venv/
+venv/
+ENV/
+env/
+.env
+.python-version
+
+# =========================
+# JetBrains (CLion / PyCharm / IDEA)
+# =========================
+.idea/
+
+# =========================
+# 操作系统
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# 日志 / 临时文件
+# =========================
+*.log
+*.tmp
+*.bak
